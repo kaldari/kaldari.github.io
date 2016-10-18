@@ -27,6 +27,7 @@ p#mwe-pt-toolbar-vertical {
 </head>
 <body>
 <div id="status"></div>
+<div id="profile"></div>
 <div style="margin:2em;"><p id="mwe-pt-toolbar-vertical" style="background-color:pink;">Curation</p></div>
 <script>
 if ( $.client.test( { msie: [ '<', 9 ] }, null, true ) ) {
@@ -35,6 +36,12 @@ if ( $.client.test( { msie: [ '<', 9 ] }, null, true ) ) {
 } else {
 	$( '#status' ).text("Not Old IE");
 }
+var myProfile = $.client.profile();
+$( '#profile' ).append( myProfile.name + "<br/>" );
+$( '#profile' ).append( myProfile.layout + "<br/>" );
+$( '#profile' ).append( myProfile.version + "<br/>" );
+$( '#profile' ).append( myProfile.versionBase + "<br/>" );
+$( '#profile' ).append( myProfile.versionNumber + "<br/>" );
 </script>
 </body>
 </html>
