@@ -31,7 +31,7 @@ p#mwe-pt-toolbar-vertical {
 <script>
 if ( $.client.test( { msie: [ '<', 9 ] }, null, true ) ) {
 	$( '#status' ).text("Old IE");
-	$( '#mwe-pt-toolbar-vertical' ).css( 'writing-mode', 'tb-rl' );
+	$( '#mwe-pt-toolbar-vertical' ).css( '-ms-writing-mode', 'tb-rl' );
 } else {
 	$( '#status' ).text("Not Old IE");
 }
