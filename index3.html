@@ -31,18 +31,7 @@ p#mwe-pt-toolbar-vertical {
 <div id="compare"></div>
 <div style="margin:2em;"><p id="mwe-pt-toolbar-vertical" style="background-color:pink;">Curation</p></div>
 <script>
-if ( $.client.test( { msie: [[ '<', 9 ]] }, null, true ) ) {
-	$( '#status' ).text("Old IE");
-	$( '#mwe-pt-toolbar-vertical' ).css( 'writing-mode', 'tb-rl' );
-} else {
-	$( '#status' ).text("Not Old IE");
-}
-var myProfile = $.client.profile();
-$( '#profile' ).append( myProfile.name + "<br/>" );
-$( '#profile' ).append( myProfile.layout + "<br/>" );
-$( '#profile' ).append( myProfile.version + "<br/>" );
-$( '#profile' ).append( myProfile.versionBase + "<br/>" );
-$( '#profile' ).append( myProfile.versionNumber + "<br/>" );
+$( '#mwe-pt-toolbar-vertical' ).css( '-ms-writing-mode', 'tb-rl' );
 </script>
 </body>
 </html>
